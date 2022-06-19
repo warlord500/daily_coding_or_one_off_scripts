@@ -1,4 +1,4 @@
-$pathDailyProblems = "D:\programming\dailyProblems"
+$pathDailyProblems = "D:\programming\daily_coding_problems"
 #assume extra info is always supplied 
 #code works if you just hit enter any way.
 $extraInfo = Read-Host -Prompt "extra info for name"
