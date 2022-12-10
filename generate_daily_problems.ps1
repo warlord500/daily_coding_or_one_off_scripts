@@ -1,4 +1,6 @@
 $pathDailyProblems = "D:\programming\daily_coding_problems"
+#$pathEditor = 'D:\portable applications\windows\notepadplusplus\notepad++.exe'
+$pathEditor = "C:\Program Files (x86)\Vim\vim90\gvim.exe"
 #assume extra info is always supplied 
 #code works if you just hit enter any way.
 $extraInfo = Read-Host -Prompt "extra info for name"
@@ -27,7 +29,7 @@ if ($extraInfo -like "*-rust"){
 #check for -rust at the end to generate rust project
 
 	cargo new --vcs none $fullPath 
-	& ('D:\portable applications\windows\notepadplusplus\notepad++.exe')  "$fullPath/src/main.rs" "$fullPath/cargo.toml" 
+	& ($pathEditor)  "$fullPath/src/main.rs" "$fullPath/cargo.toml" 
 	#& ('git-bash.exe') $fullPath
 } else {
 # not sure if that works 
@@ -42,6 +44,6 @@ $fullPath = "$fullPath.py"
 	echo 'if __name__ == "__main__":' >> $fullPath;
 	echo "	print($extraInfo())" >> $fullPath;
 
-	& ('C:/Program Files (x86)/Notepad++/Notepad++.exe')  $fullPath
+	& ($pathEditor)  $fullPath
 }
 # end else
